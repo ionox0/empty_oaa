@@ -15,15 +15,15 @@ describe('Users JSON api', function(){
       expect(er).to.be.equal(null);
       done();
     });
-  })
+  });
 
   it('should be able to create a user', function(done){
     superagent.post('http://localhost:3000/api/v1/users')
-      .send({first_name: "Ford", last_name: "Prefect"})
+      .send({first_name: 'Ford', last_name: 'Prefect'})
       .end(function(err, res){
         expect(err).to.be.eql(null);
-        console.log(JSON.stringify(res.body));
-        expect(res.body.first_name).to.be.eql("Ford");
+
+        expect(res.body.first_name).to.be.eql('Ford');
 
         id = res.body._id;
         done();
