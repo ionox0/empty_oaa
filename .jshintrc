@@ -1,4 +1,5 @@
 {
+
   "globals"   : {
     /* MOCHA */
     "describe"   : false,
@@ -9,5 +10,8 @@
     "afterEach"  : false,
     "require": false,
     "console": false
-  }
+  },
+
+    "strict":false,
+    "unused":false
 }
